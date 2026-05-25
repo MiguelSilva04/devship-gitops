@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: nginx:1.14.6
+        image: nginx:1.14.3
         ports:
         - containerPort: 80
         resources:
