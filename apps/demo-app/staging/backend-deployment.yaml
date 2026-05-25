@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: nginx:1.14.7
+        image: nginx:1.14.6
         ports:
         - containerPort: 80
         resources:
