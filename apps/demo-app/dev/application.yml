@@ -8,6 +8,7 @@ spec:
   source:
     repoURL: https://github.com/MiguelSilva04/devship-gitops
     targetRevision: HEAD
+    revisionHistoryLimit: 10
     path: apps/demo-app/dev
   destination:
     server: https://kubernetes.default.svc
