@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-app-dev
+  name: demo-app-prod
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/MiguelSilva04/devship-gitops
     targetRevision: HEAD
-    revisionHistoryLimit: 10
-    path: apps/demo-app/dev
+    revisionHistoryLimit: 5
+    path: apps/demo-app/prod
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: prod
 #  syncPolicy:
 #    automated:
 #      selfHeal: true
