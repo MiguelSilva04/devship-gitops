@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: nginx:1.16
+        image: ghcr.io/MiguelSilva04/devship-demo-app:manual-test
         ports:
         - containerPort: 80
         resources:
