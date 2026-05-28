@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ghcr.io/MiguelSilva04/devship-demo-app:manual-test
+        image: ghcr.io/miguelsilva04/devship-demo-app:manual-test
         ports:
         - containerPort: 80
         resources:
