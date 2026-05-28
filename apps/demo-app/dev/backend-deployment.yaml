@@ -18,7 +18,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: backend
-        image: ghcr.io/miguelsilva04/devship-demo-app:manual-test
+        image: ghcr.io/miguelsilva04/devship-demo-app:3ec35db
         ports:
         - containerPort: 80
         resources:
