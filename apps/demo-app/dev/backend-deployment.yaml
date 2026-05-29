@@ -18,7 +18,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: backend
-        image: 306667525254.dkr.ecr.us-east-1.amazonaws.com/devship-demo-app:9c0af1c
+        image: 306667525254.dkr.ecr.us-east-1.amazonaws.com/devship-demo-app:31ca814
         ports:
         - containerPort: 80
         resources:
