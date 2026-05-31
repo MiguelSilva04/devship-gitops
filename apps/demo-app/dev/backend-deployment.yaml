@@ -21,6 +21,18 @@ spec:
         image: 306667525254.dkr.ecr.us-east-1.amazonaws.com/devship-demo-app:054b488
         ports:
         - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
         resources:
           requests:
             memory: "32Mi"

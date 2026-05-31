@@ -19,6 +19,18 @@ spec:
         image: ghcr.io/miguelsilva04/devship-demo-app:manual-test
         ports:
         - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
         resources:
           requests:
             memory: "32Mi"
