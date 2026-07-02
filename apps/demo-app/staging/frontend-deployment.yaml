@@ -16,6 +16,8 @@ spec:
       labels:
         app: frontend
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
       - name: frontend
         image: ghcr.io/miguelsilva04/devship-demo-app:manual-test
