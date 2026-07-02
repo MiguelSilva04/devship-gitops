@@ -22,7 +22,7 @@ spec:
       - name: backend
         image: 306667525254.dkr.ecr.us-east-1.amazonaws.com/devship-demo-app:08e79ed-22
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         readinessProbe:
           httpGet:
             path: /
