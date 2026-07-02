@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  annotations:
+    devship/source-repository: https://github.com/MiguelSilva04/devship-demo-app-frontend
   labels:
     app: frontend
 spec:
