@@ -8,12 +8,12 @@ spec:
   source:
     repoURL: https://github.com/MiguelSilva04/devship-gitops
     targetRevision: HEAD
-    revisionHistoryLimit: 15
     path: apps/demo-app/dev
+  revisionHistoryLimit: 15
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
-    syncPolicy:
-     automated:
-       selfHeal: true
-       prune: true
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
