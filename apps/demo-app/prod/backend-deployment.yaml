@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
+  annotations:
+    devship/source-repository: https://github.com/MiguelSilva04/devship-demo-app-backend
   labels:
     app: backend
 spec:
@@ -14,9 +16,11 @@ spec:
       labels:
         app: backend
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
       - name: backend
-        image: nginx:1.16
+        image: 306667525254.dkr.ecr.us-east-1.amazonaws.com/devship-demo-backend:78141b5-27
         ports:
         - containerPort: 80
         startupProbe:

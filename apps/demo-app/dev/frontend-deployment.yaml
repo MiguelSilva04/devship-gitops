@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  annotations:
+    devship/source-repository: https://github.com/MiguelSilva04/devship-demo-app-frontend
   labels:
     app: frontend
 spec:
@@ -14,9 +16,11 @@ spec:
       labels:
         app: frontend
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
       - name: frontend
-        image: ghcr.io/miguelsilva04/devship-demo-app:manual-test
+        image: 306667525254.dkr.ecr.us-east-1.amazonaws.com/devship-demo-frontend:d99c343-23
         ports:
         - containerPort: 80
         startupProbe:
