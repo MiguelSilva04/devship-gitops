@@ -19,6 +19,12 @@ spec:
         image: ghcr.io/miguelsilva04/devship-demo-app:manual-test
         ports:
         - containerPort: 80
+        startupProbe:
+          httpGet:
+            path: /
+            port: 3000
+          periodSeconds: 5
+          failureThreshold: 12
         readinessProbe:
           httpGet:
             path: /
